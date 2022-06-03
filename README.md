@@ -1,1 +1,1 @@
-Meu repositório é para salvar os exercicios da trybe.
+Salvar os exercicios trybe!
