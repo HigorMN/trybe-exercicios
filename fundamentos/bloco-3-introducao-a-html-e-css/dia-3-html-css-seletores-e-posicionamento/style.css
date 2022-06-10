@@ -1,9 +1,16 @@
+body {
+  padding: 2%;
+}
 .nome {
     color: #b87d4b;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
   }
   .descricao {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     text-align: center;
+     position: relative;
+     top: 100px;
   }
   body {
     background-color: #f9f9f9;
@@ -13,4 +20,24 @@
   }
   .tamanhoDaLista {
     font-size: 20px;
+  }
+
+  #fotoHigor {
+    padding: 10px;
+    background-color: lightseagreen;
+    align-items: center;
+    float: left;
+  }
+
+  .image-container{
+    height: 353px;
+  }
+
+ .hab ul li:nth-child(odd) {
+background-color: #b87d4b;
+  }
+
+  div {
+    border: 2px solid green;
+    position: relative;
   }
