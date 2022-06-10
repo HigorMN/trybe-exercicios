@@ -1,0 +1,41 @@
+div:hover {
+    max-width: max-content;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  text-align: center;
+  padding: 5px;
+}
+
+div {
+    padding: 3px;
+}
+
+.corAzul h3{
+  color: blue;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+}
+
+.corVerde h3{
+  color: green;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.corLaranja h3{
+  color: orange;
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+.corMarron h3{
+  color: brown;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.corClara h3{
+  color: lightgreen;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
