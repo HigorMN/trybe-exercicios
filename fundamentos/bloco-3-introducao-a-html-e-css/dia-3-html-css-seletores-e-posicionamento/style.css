@@ -22,7 +22,8 @@ body {
     font-size: 20px;
   }
 
-  #fotoHigor {
+  #fotoHigor { 
+    border-radius: 10px;
     padding: 10px;
     background-color: lightseagreen;
     align-items: center;
@@ -35,9 +36,4 @@ body {
 
  .hab ul li:nth-child(odd) {
 background-color: #b87d4b;
-  }
-
-  div {
-    border: 2px solid green;
-    position: relative;
   }
