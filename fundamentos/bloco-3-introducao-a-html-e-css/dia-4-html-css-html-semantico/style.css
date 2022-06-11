@@ -1,16 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Times New Roman", Times, serif;
-  font-size: 15px;
+  font-size: 18px;
+  background-color: #f9f9f9;
 }
-header{
+header {
     text-align: center;
+    background-color: aquamarine;
+    margin: 0;
+  }
+nav {
+  padding: 15px 30px;
+  width: 900px;
+  margin: auto;
+  border: 1px solid gray;
 }
-artcle, h1 {
+nav ul li {
+  display: inline-block;
+  padding: 5px 30px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #2FC18C;
+}
+nav ul li:hover {
+background-color: #309E76;
+}
+nav ul {
+ display: flex;
+ margin: auto;
+}
+nav a {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+artcle,
+h1 {
   font-size: 50px;
+  padding-bottom: 20px;
 }
 h2 {
   border-bottom: 1px solid gray;
   font: 1.5em;
+}
+article section p {
+    padding: 5px;
+}
+article section ol {
+    padding: 10px 50px;
+}
+article section ol li {
+    padding-bottom: 15px;
 }
 .line {
   width: 618px;
@@ -23,8 +70,10 @@ h2 {
 article {
   width: 900px;
   margin: auto;
-  border: 1px solid black;
+  border: 1px solid gray;
   padding: 30px;
+  border-radius: 0px 0px 5px 5px;
+  border-top: none;
 }
 
 .aside {
@@ -32,8 +81,9 @@ article {
   padding-left: 15px;
   margin-left: 15px;
   float: right;
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 5px;
+  margin-bottom: 2px;
 }
 .aside p {
   text-align: center;
@@ -46,14 +96,31 @@ article {
   padding: 6px;
   border-radius: 5px;
   margin-right: 17px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 .aside table {
-  border: 1px solid black;
+  border: 1px solid gray;
   border-bottom: none;
   margin: auto;
   padding: 5px;
   border-radius: 5px;
+  margin-top: 10px;
 }
 .aside img {
   border-radius: 3px;
+  margin-top: 20px;
+}
+.aside table td {
+    padding: 1px 10px;
+}
+
+iframe {
+    display: block;
+    padding: 15px;
+}
+
+footer {
+    padding: 15px;
+    text-align: center;
 }
