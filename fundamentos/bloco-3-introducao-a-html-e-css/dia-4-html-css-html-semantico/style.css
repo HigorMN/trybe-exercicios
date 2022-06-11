@@ -1,5 +1,24 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .imgartigo {
-    width: 180px;
-    float: left;
-    padding: 10px;
+  width: 180px;
+  float: left;
+  padding: 10px;
+}
+
+p {
+    font-size: 14px;
+}
+
+article {
+    width: 65%;
+}
+
+{
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  background-color: lightgray;
 }
