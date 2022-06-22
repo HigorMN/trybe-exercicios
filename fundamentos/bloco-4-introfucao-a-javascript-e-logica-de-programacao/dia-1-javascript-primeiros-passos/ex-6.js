@@ -1,6 +1,6 @@
 let pecas = "rei";
 
-switch (pecas) {
+switch (pecas.toLowerCase()) {
   case "rei":
     console.log("O rei pode mover-se em todas as direções");
     break;
