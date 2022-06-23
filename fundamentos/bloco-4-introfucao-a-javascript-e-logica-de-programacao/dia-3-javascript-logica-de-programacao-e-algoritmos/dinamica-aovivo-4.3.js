@@ -82,4 +82,10 @@ let ademar = 19;
 let adriana = 40;
 let julia = 15;
 
-console.log(Math.min(ademar, adriana, julia)); 
+// Math.min(ademar, adriana, julia);
+
+if(ademar < adriana && ademar < julia){
+    console.log("Ademar é a pessoa mais nova");
+} else if (adriana < ademar && adriana < julia){
+    console.log("Ademar é a pessoa mais nova");
+}
