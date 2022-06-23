@@ -14,7 +14,7 @@ console.log("A soma de 35 a 105 é:", soma);
 
 let contadorImpares = 0;
 
-for (let index = 15; index <= 200; index += 1) {
+for (let index = 15; index <= 155; index += 1) {
     if(index % 3 === 0){
         contadorImpares++
     }
@@ -53,3 +53,10 @@ let jogo = ["pedra", "papel", "tesoura"]
     } else if (jogador1 === jogo[2] && jogador2 === jogo[2]){
         console.log("Empate");
     }
+
+//     4. Desenvolva um algoritmo que verifica se a pessoa é maior ou menor de idade.
+// Imprima no console seguindo o exemplo: “A pessoa é maior de idade” ou “A pessoa é menor de idade”.
+// Bônus: Crie a condição utilizando operador ternário.
+
+// 5. Crie um algoritmo que recebe a idade de Ademar, Adriana e Julia e imprima quem é a mais nova no formato:
+// “Pessoa” é a mais nova.
