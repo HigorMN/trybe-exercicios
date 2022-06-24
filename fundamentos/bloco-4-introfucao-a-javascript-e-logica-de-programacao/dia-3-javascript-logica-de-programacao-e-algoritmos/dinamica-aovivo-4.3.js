@@ -21,9 +21,9 @@ for (let index = 15; index <= 155; index += 1) {
   }
 
   if(contadorImpares >= 50){
-    console.log("Mensagem segcreta: Deu certo!!!!");
+    console.log("A quantidade de numeros impares é maior que 50.");
   } else {
-    console.log("Deu Ruim :(");
+    console.log("A quantidade de numeros impares é menor que 50.");
   }
 
 //3. Crie um algoritmo que simula o jogo “pedra, papel e tesoura” levando em consideração  que são apenas duas pessoas jogando e imprima o resultado no formato:
@@ -87,5 +87,7 @@ let julia = 15;
 if(ademar < adriana && ademar < julia){
     console.log("Ademar é a pessoa mais nova");
 } else if (adriana < ademar && adriana < julia){
-    console.log("Ademar é a pessoa mais nova");
+    console.log("Adriana é a pessoa mais nova");
+} else {
+    console.log("Julia é a pessoa mais nova");
 }
