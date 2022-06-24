@@ -11,7 +11,7 @@ let info = {
 
 console.log("Bem-vinda,", info.personagem);
 
-// "FOGUETE" 2 - Insira no objeto uma nova propriedade com o nome de chave 'recorrente' e o valor 'Sim' e, em seguida, imprima o objeto no console. Valor esperado no console:
+//🚀 2 - Insira no objeto uma nova propriedade com o nome de chave 'recorrente' e o valor 'Sim' e, em seguida, imprima o objeto no console. Valor esperado no console:
 
 info['recorrente'] = "Sim";
 
@@ -44,18 +44,18 @@ for(chaves in info){
 
 // Usando o objeto abaixo, faça os exercícios a seguir:
 
-// let leitor = {
-//     nome: 'Julia',
-//     sobrenome: 'Pessoa',
-//     idade: 21,
-//     livrosFavoritos: [
-//       {
-//         titulo: 'O Pior Dia de Todos',
-//         autor: 'Daniela Kopsch',
-//         editora: 'Tordesilhas',
-//       },
-//     ],
-//   };
+let leitor = {
+    nome: 'Julia',
+    sobrenome: 'Pessoa',
+    idade: 21,
+    livrosFavoritos: [
+      {
+        titulo: 'O Pior Dia de Todos',
+        autor: 'Daniela Kopsch',
+        editora: 'Tordesilhas',
+      },
+    ],
+  };
 
   let info2 = {
     personagem: "Tio Patinhas",
@@ -70,3 +70,7 @@ for(chaves in info){
   if (info.recorrente === info2.recorrente){
     console.log("Ambos recorrentes");
   }
+
+//🚀 6 - Acesse as chaves nome, sobrenome e titulo, que está dentro da chave livrosFavoritos, e faça um console.log no seguinte formato: "O livro favorito de Julia Pessoa se chama 'O Pior Dia de Todos'".
+
+console.log("O livro favoito de", leitor.nome, leitor.sobrenome, "se chama " + "'" + leitor.livrosFavoritos[0].titulo + "'");
