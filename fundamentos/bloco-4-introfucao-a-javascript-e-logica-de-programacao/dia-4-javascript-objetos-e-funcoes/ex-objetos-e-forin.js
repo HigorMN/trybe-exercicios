@@ -88,3 +88,7 @@ leitor.livrosFavoritos.push({
     autor: 'JK Rowling',
     editora: 'Rocco',
   })
+
+// 🚀 8 - Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: "Julia tem 2 livros favoritos".
+
+console.log("julia tem", leitor.livrosFavoritos.length, "livros favoritos");
