@@ -2,10 +2,10 @@
 // . Array de teste: [2, 4, 6, 7, 10, 0, -3];.
 // . Valor esperado no retorno da função: 6.
 
-function indiceDoMaiorValor(ArrayDeInteios) {
+function indiceDoMaiorValor(arrayDeInteios) {
     let indiceMenor = 0;
-    for (indice in ArrayDeInteios) {
-        if(ArrayDeInteios[indiceMenor] > ArrayDeInteios[indice]){
+    for (indice in arrayDeInteios) {
+        if(arrayDeInteios[indiceMenor] > arrayDeInteios[indice]){
             indiceMenor = indice;
         }
     }
