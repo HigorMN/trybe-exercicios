@@ -5,7 +5,7 @@
 // . verificaPalindrome('desenvolvimento');
 // . Retorno esperado: false
 
-function ehplindromo(palindromo) {
+function ehPlindromo(palindromo) {
 
     let inverte = palindromo.split('').reverse().join('')
 
@@ -16,5 +16,5 @@ function ehplindromo(palindromo) {
     }
 }
 
-ehplindromo('arara')
+ehPlindromo('arara')
 
