@@ -3,23 +3,24 @@
 // . Valor esperado no retorno da função: 2.
 
 function maisRepetido(numeros) {
-    let contRepetido = 0;
-    let contNumero = 0;
-    let indexNumeroRepetido = 0;
-    for (let index in numeros) {
-      let verificaNumero = numeros[index];
-      for (let index2 in numeros) {
-        if (verificaNumero === numeros[index2]) {
-          contNumero += 1;
-        }
+  let contarNumero = 0;
+  let numerosRepitidos = 0;
+  let numeroMaisRepitido = 0;
+
+  for (index in numeros) {
+    let numeroIndex = numeros[index]
+    for (index2 in numeros){
+      if (numeroIndex === numeros[index2]){
+        numerosRepitidos += 1
       }
-      if (contNumero > contRepetido) {
-        contRepetido = contNumero;
-        indexNumeroRepetido = index;
-      }
-      contNumero = 0;
     }
-    return numeros[indexNumeroRepetido];
+    if (numerosRepitidos > contarNumero) {
+      contarNumero = numerosRepitidos;
+      numeroMaisRepitido = numeros[index];
+    }
+    numerosRepitidos = 0;
   }
+  return numeroMaisRepitido;
+}
   
-  console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3]));
+  console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3,]));
