@@ -1,11 +1,10 @@
-const paragraph = document.getElementById("paragraph");
-paragraph.style.color = "red";
-
+const paragraph = document.getElementsByClassName("paragraph");
+paragraph[0].style.color = "red";
+paragraph[1].style.color = "blue";
 
 const pageTitle = (document.getElementById("page-title").innerText =
   "Spider Main");
 
-const secondP = (document.getElementById("second-paragraph").innerText =
-  ":) <> OI");
-
 const subT = (document.getElementById("subtitle").innerText = "Saldação");
+
+subT.style.color = "red";
