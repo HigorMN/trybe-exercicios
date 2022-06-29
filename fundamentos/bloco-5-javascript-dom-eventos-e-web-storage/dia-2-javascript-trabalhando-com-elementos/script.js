@@ -10,4 +10,4 @@ const ex4 = document.querySelector('#pai').firstChild
 
 const ex5 = document.querySelector('#elementoOndeVoceEsta').firstChild
 
-const ex6 = document.querySelector('#elementoOndeVoceEsta').parentElement
+const ex6 = document.querySelector('#elementoOndeVoceEsta').nextSibling
