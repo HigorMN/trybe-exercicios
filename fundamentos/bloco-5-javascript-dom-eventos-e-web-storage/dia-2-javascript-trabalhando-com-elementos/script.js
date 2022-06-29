@@ -1,6 +1,6 @@
 const ex1 = document.querySelector('#elementoOndeVoceEsta')
 
-const ex2 = document.querySelector('#elementoOndeVoceEsta').parentNode
+const ex2 = document.querySelector('#elementoOndeVoceEsta').parentElement
 
 ex2.style.color = 'blue'
 
@@ -9,3 +9,5 @@ const ex3 = document.querySelector('#primeiroFilhoDoFilho').innerText = 'Adicion
 const ex4 = document.querySelector('#pai').firstChild
 
 const ex5 = document.querySelector('#elementoOndeVoceEsta').firstChild
+
+const ex6 = document.querySelector('#elementoOndeVoceEsta').parentElement
