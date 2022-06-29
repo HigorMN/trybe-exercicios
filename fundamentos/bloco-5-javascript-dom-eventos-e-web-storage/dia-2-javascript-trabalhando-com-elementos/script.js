@@ -22,3 +22,5 @@ const ex6 = document.querySelector('#elementoOndeVoceEsta').nextSibling
 const ex7 = document.querySelector('#elementoOndeVoceEsta').nextElementSibling
 
 // 8. Agora acesse o terceiroFilho a partir de pai.
+
+const ex8 = document.querySelector('#pai').lastElementChild.previousElementSibling
