@@ -24,3 +24,17 @@ const ex7 = document.querySelector('#elementoOndeVoceEsta').nextElementSibling
 // 8. Agora acesse o terceiroFilho a partir de pai.
 
 const ex8 = document.querySelector('#pai').lastElementChild.previousElementSibling
+
+// 9. Crie um irmão para elementoOndeVoceEsta.
+const ex9 = document.querySelector('#pai')
+const newDiv = document.createElement('div')
+ex9.appendChild(newDiv)
+
+
+// 10. Crie um filho para elementoOndeVoceEsta.
+
+// 11. Crie um filho para primeiroFilhoDoFilho.
+
+// 12. A partir desse filho criado, acesse terceiroFilho.
+
+// 13. Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
