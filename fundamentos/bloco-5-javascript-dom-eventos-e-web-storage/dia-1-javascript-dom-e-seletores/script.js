@@ -17,3 +17,5 @@
         const titulo = document.getElementsByClassName('title')[0];
         titulo.innerText = 'Exerrcício 5.1 - JavaScript'
         // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        const paragrafos = document.getElementsByTagName('p')[1].innerHTML;
+        paragrafos.toUpperCase()
