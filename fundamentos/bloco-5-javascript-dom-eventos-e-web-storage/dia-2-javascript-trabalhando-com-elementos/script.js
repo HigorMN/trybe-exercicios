@@ -36,6 +36,9 @@ const newDiv2 = document.createElement('div')
 ex10.appendChild(newDiv2)
 
 // 11. Crie um filho para primeiroFilhoDoFilho.
+const ex11 = document.querySelector('#primeiroFilhoDoFilho')
+const newDiv3 = document.createElement('div')
+ex11.appendChild(newDiv3)
 
 // 12. A partir desse filho criado, acesse terceiroFilho.
 
