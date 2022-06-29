@@ -14,4 +14,6 @@
         const corSec = document.getElementsByClassName('center-content')[0];
         corSec.style.backgroundColor = 'white'
         // 4. Crie uma função que corrija o texto da tag <h1>.
+        const titulo = document.getElementsByClassName('title')[0];
+        titulo.innerText = 'Exerrcício 5.1 - JavaScript'
         // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
