@@ -41,5 +41,6 @@ const newDiv3 = document.createElement('div')
 ex11.appendChild(newDiv3)
 
 // 12. A partir desse filho criado, acesse terceiroFilho.
+const ex12 = document.querySelector('#primeiroFilhoDoFilho').firstElementChild.parentElement.parentElement.parentElement.lastChild.previousElementSibling.previousElementSibling
 
 // 13. Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
