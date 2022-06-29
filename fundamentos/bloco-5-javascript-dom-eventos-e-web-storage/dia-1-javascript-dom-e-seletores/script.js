@@ -11,5 +11,7 @@
         const corMain = document.getElementsByClassName('main-content')[0];
         corMain.style.backgroundColor = 'rgb(76,164,109)'
         // 3. Crie uma função que mude a cor do quadrado vermelho para branco.
+        const corSec = document.getElementsByClassName('center-content')[0];
+        corSec.style.backgroundColor = 'white'
         // 4. Crie uma função que corrija o texto da tag <h1>.
         // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
