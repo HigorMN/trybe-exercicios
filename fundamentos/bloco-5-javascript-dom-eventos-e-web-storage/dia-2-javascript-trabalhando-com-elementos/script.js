@@ -13,6 +13,12 @@ const ex3 = document.querySelector('#primeiroFilhoDoFilho').innerText = 'Adicion
 const ex4 = document.querySelector('#pai').firstChild
 
 // 5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
-const ex5 = document.querySelector('#elementoOndeVoceEsta').firstChild
+document.querySelector('#elementoOndeVoceEsta').parentElement.firstElementChild
 
+// 6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
 const ex6 = document.querySelector('#elementoOndeVoceEsta').nextSibling
+
+// 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+const ex7 = document.querySelector('#elementoOndeVoceEsta').nextElementSibling
+
+// 8. Agora acesse o terceiroFilho a partir de pai.
