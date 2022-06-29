@@ -30,8 +30,10 @@ const ex9 = document.querySelector('#pai')
 const newDiv = document.createElement('div')
 ex9.appendChild(newDiv)
 
-
 // 10. Crie um filho para elementoOndeVoceEsta.
+const ex10 = document.querySelector('#elementoOndeVoceEsta')
+const newDiv2 = document.createElement('div')
+ex10.appendChild(newDiv2)
 
 // 11. Crie um filho para primeiroFilhoDoFilho.
 
