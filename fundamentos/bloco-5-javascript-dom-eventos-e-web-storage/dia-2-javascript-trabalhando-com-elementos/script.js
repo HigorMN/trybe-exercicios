@@ -44,3 +44,4 @@ ex11.appendChild(newDiv3)
 const ex12 = document.querySelector('#primeiroFilhoDoFilho').firstElementChild.parentElement.parentElement.parentElement.lastChild.previousElementSibling.previousElementSibling
 
 // 13. Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+const ex13 = document.querySelector('#paiDoPai').firstElementChild
