@@ -15,14 +15,16 @@ for (let index = 0; index < listas.length; index += 1) {
     listas[index].classList.add("tech");
   });
 }
-
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
-document.getElementsByTagName("li")[0].classList.add('tech');
+document.getElementsByTagName("li")[0].classList.add("tech");
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
-
+let caixaDeTexto = document.getElementById("input");
+caixaDeTexto.addEventListener("keyup", function () {
+  caixaDeTexto.classList.add("tech");
+});
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
