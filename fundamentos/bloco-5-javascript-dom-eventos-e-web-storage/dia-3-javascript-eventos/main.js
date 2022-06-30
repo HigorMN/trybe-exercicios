@@ -11,9 +11,10 @@ const myWebpage = document.getElementById("my-spotrybefy");
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 let listas = document.getElementsByTagName("li");
 for (let index = 0; index < listas.length; index += 1) {
-  listas[index].addEventListener("click", function () {
-    listas[index].classList.add("tech");
-  });
+  listas[index].addEventListener("click", addC);
+}
+function addC(event) {
+  event.target.classList.add("tech");
 }
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
@@ -22,9 +23,11 @@ document.getElementsByTagName("li")[0].classList.add("tech");
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 let caixaDeTexto = document.getElementById("input");
-caixaDeTexto.addEventListener("keyup", function () {
-  caixaDeTexto.classList.add("tech");
-});
+caixaDeTexto.addEventListener("keyup", aoEscrever);
+
+function aoEscrever(event) {
+  event.target.classList.add("tech");
+}
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 let duplo = document.getElementById("my-spotrybefy");
@@ -38,8 +41,8 @@ function abrirOutraPagina() {
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 duplo.addEventListener("mouseover", alterarCor);
-function alterarCor() {
-  duplo.style.color = 'blue';
+function alterarCor(event) {
+  event.target.style.color = "blue";
 }
 
 // Segue abaixo um exemplo do uso de event.target:
