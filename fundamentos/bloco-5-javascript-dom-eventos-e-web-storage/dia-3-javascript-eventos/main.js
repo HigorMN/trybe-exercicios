@@ -27,6 +27,12 @@ caixaDeTexto.addEventListener("keyup", function () {
 });
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
+let duplo = document.getElementById("my-spotrybefy");
+duplo.addEventListener("dblclick", abrirOutraPagina);
+
+function abrirOutraPagina() {
+  window.open("http://pt.stackoverflow.com");
+}
 // 4.1. Que tal redirecionar para seu portfólio?
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
