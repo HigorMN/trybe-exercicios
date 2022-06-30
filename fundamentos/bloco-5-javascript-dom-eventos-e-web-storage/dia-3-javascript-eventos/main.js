@@ -31,7 +31,7 @@ let duplo = document.getElementById("my-spotrybefy");
 duplo.addEventListener("dblclick", abrirOutraPagina);
 
 function abrirOutraPagina() {
-  window.open("http://pt.stackoverflow.com");
+  window.open("https://higormn.github.io/");
 }
 // 4.1. Que tal redirecionar para seu portfólio?
 
