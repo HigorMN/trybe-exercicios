@@ -1,24 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <main id="paiDoPai">
-        <section id="pai">
-          <section id="primeiroFilho"></section>
-          <section id="elementoOndeVoceEsta">
-            <section id="primeiroFilhoDoFilho"></section>
-            <section id="segundoEUltimoFilhoDoFilho"></section>
-          </section>
-          Atenção!
-          <section id="terceiroFilho"></section>
-          <section id="quartoEUltimoFilho"></section>
-        </section>
-      </main>
-      <script src="script.js"></script>
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      // 1. Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+      const ex1 = document.body;
+      const newH1 = document.createElement("h1");
+      ex1.appendChild(newH1).innerText = "Exercício 5.2 - JavaScript DOM";
+
+      // 2. Adicione a tag main com a classe main-content como filho da tag body;
+      const newMain = document.createElement("main");
+      ex1.appendChild(newMain);
+      newMain.className = "main-content";
+
+      // 3. Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+      const newSection = document.createElement("section");
+      newMain.appendChild(newSection);
+      newSection.className = "center-content";
+
+      // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+      const newP = document.createElement("p");
+      newSection.appendChild(newP).innerText = "ALGUM TEXTO";
+
+      // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      const newSection2 = document.createElement("section");
+      newMain.appendChild(newSection2);
+      newSection2.className = "left-content";
+
+      // 6. Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+      const newSection3 = document.createElement("section");
+      newMain.appendChild(newSection3);
+      newSection3.className = "right-content";
+
+      // 7. Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+      const newImg = document.createElement("img");
+      newSection2.appendChild(newImg);
+      newImg.src = "https://picsum.photos/200";
+      newImg.className = "small-image";
+
+      // 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+      const newList = document.createElement("ul");
+      newSection3.appendChild(newList);
+        newList.className = 'listaDe1a10'
+      let listaDe1a10 = document.querySelector(".listaDe1a10");
+      for (let index = 1; index <= 10; index += 1) {
+        let de1a10 = index;
+
+        let listaN = document.createElement("li");
+        listaN.innerText = de1a10;
+
+        newList.appendChild(listaN);
+      }
+
+      // 9. Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+      for (let index = 0; index < 3; index += 1) {
+        let newH3 = document.createElement("h3");
+        newMain.appendChild(newH3);
+        newH3.classList.add("description");
+      }
+
+      // Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+
+      // 1. Adicione a classe title na tag h1 criada;
+      newH1.classList.add("title");
+
+      // 2. Adicione a classe description nas 3 tags h3 criadas;
+      // 'criado na linha 113'
+
+      // 3. Remova a section criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+      const remov = document.querySelector(".main-content");
+      remov.removeChild(newSection2);
+
+      // 4. Centralize a section criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
+      newSection3.style.margin = "auto";
+
+      // 5. Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+      newMain.style.backgroundColor = 'green'
+
+      // 6. Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+      const removList = document.querySelector('.listaDe1a10')
+
+      removList.lastElementChild.remove()
+      removList.lastElementChild.remove()
+    </script>
+  </body>
 </html>
