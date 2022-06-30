@@ -18,6 +18,8 @@ for (let index = 0; index < listas.length; index += 1) {
 
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
+document.getElementsByTagName("li")[0].classList.add('tech');
+
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
