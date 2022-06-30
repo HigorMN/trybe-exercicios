@@ -64,23 +64,31 @@
       ex1.appendChild(newH1).innerText = "Exercício 5.2 - JavaScript DOM";
 
       // 2. Adicione a tag main com a classe main-content como filho da tag body;
-      const newMain = document.createElement("main")
-      ex1.appendChild(newMain)
-      newMain.className = 'main-content'
+      const newMain = document.createElement("main");
+      ex1.appendChild(newMain);
+      newMain.className = "main-content";
 
       // 3. Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
-      const newSection = document.createElement('section')
-      newMain.appendChild(newSection)
-      newSection.className = 'center-content'
+      const newSection = document.createElement("section");
+      newMain.appendChild(newSection);
+      newSection.className = "center-content";
 
       // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
-      const newP = document.createElement('p')
-      newSection.appendChild(newP).innerText = 'ALGUM TEXTO'
+      const newP = document.createElement("p");
+      newSection.appendChild(newP).innerText = "ALGUM TEXTO";
 
       // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
-      const newSection2 = document.createElement('section')
-      newMain.appendChild(newSection2)
-      newSection2.className = 'left-content'
+      const newSection2 = document.createElement("section");
+      newMain.appendChild(newSection2);
+      newSection2.className = "left-content";
+
+      // 6. Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+      const newSection3 = document.createElement("section");
+      newMain.appendChild(newSection3);
+      newSection3.className = "right-content";
+
+
+
     </script>
   </body>
 </html>
