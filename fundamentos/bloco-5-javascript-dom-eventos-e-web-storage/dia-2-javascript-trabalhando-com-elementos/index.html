@@ -97,13 +97,19 @@
       const newList = document.createElement("ul");
       newSection3.appendChild(newList);
       let listaDe0a10 = document.querySelector(".listaDe0a10");
-      for (let index = 0; index <= 10; index += 1) {
+      for (let index = 1; index <= 10; index += 1) {
         let de0a10 = index;
 
         let listaN = document.createElement("li");
         listaN.innerText = de0a10;
 
         newList.appendChild(listaN);
+      }
+
+      // 9. Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+      for (let index = 0; index < 3; index += 1) {
+        let newH3 = document.createElement("h3");
+        newMain.appendChild(newH3);
       }
     </script>
   </body>
