@@ -58,10 +58,15 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
-      // 1.  Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
-      const ex1 = document.body
-      const newh1 = document.createElement('h1')
-      ex1.appendChild(newh1).innerText = 'Exercício 5.2 - JavaScript DOM'
+      // 1. Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+      const ex1 = document.body;
+      const newH1 = document.createElement("h1");
+      ex1.appendChild(newH1).innerText = "Exercício 5.2 - JavaScript DOM";
+
+      // 2. Adicione a tag main com a classe main-content como filho da tag body;
+      const newMain = document.createElement("main")
+      ex1.appendChild(newMain)
+      newMain.className = 'main-content'
     </script>
   </body>
 </html>
