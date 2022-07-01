@@ -57,15 +57,35 @@ function feriados() {
   const botao = document.createElement("button");
   botao.id = "btn-holiday";
   botao.appendChild(paragrafoFeriados).innerText = "Feriado";
-  //Ecercício 3:
   conteinerBotao.appendChild(botao);
-  botao.addEventListener("click", () => mudarCOR(holidayClick, "white"));
 }
 
 feriados();
 
-function mudarCOR(elementos, color) {
-  for (let index = 0; index < elementos.length; index += 1) {
-    elementos[index].style.backgroundColor = color;
+//Ecercício 3:
+
+function displayHolidays() {
+  //pega o botão
+    let pegarHoliButton = document.querySelector('#btn-holiday');
+  //pega os dias de evento
+    let pegarHolidias = document.querySelectorAll('.holiday')
+    // armazena a cor de fundo
+    let backgroundColor = 'rgb(238,238,238)';
+    // a cor que vai mudar
+    let novaCor = 'white';
+  // ao clicar
+    pegarHoliButton.addEventListener('click', function() {
+      //index percorre os dias que tem o evento
+      for (let index = 0; index < pegarHolidias.length; index += 1) {
+        //se o dia que ta no index for a cor que está alterada
+        if (pegarHolidias[index].style.backgroundColor === novaCor) {
+          //ele altera para a cor do fundo
+          pegarHolidias[index].style.backgroundColor = backgroundColor;
+          // se não ele coloca a cor que eu quero alterar
+        } else {
+          pegarHolidias[index].style.backgroundColor = novaCor;
+        }
+      }
+    });
   }
-}
+  displayHolidays();
