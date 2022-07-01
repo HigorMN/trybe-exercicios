@@ -49,15 +49,23 @@ function decemberDays() {
 decemberDays();
 
 //  Exercício 2:
+
 function feriados() {
+  const holidayClick = document.getElementsByClassName("holiday");
   const conteinerBotao = document.querySelector(".buttons-container");
   const paragrafoFeriados = document.createElement("p");
   const botao = document.createElement("button");
   botao.id = "btn-holiday";
   botao.appendChild(paragrafoFeriados).innerText = "Feriado";
+  //Ecercício 3:
   conteinerBotao.appendChild(botao);
+  botao.addEventListener("click", () => mudarCOR(holidayClick, "white"));
 }
 
 feriados();
 
-// Exercício 3:
+function mudarCOR(elementos, color) {
+  for (let index = 0; index < elementos.length; index += 1) {
+    elementos[index].style.backgroundColor = color;
+  }
+}
