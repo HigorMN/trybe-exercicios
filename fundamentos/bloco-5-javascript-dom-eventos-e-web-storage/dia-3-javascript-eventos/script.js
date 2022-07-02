@@ -111,3 +111,19 @@ function fridayDay(dias) {
 }
 let sextas = [4, 11, 18, 25];
 fridayDay(sextas);
+
+//Exercício 6:
+
+function daysZoom() {
+  let days = document.querySelectorAll(".day");
+  for (let index = 0; index < days.length; index += 1) {
+    days[index].addEventListener("mouseover", () => font("30px", event));
+    days[index].addEventListener("mouseout", () => font("20px", event));
+  }
+}
+
+function font(tamanho, event) {
+  event.target.style.fontSize = tamanho;
+}
+
+daysZoom();
