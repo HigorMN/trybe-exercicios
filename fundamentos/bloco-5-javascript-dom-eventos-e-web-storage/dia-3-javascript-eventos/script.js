@@ -82,14 +82,32 @@ function displayHolidays() {
 }
 displayHolidays(); //coloca a função pra funcionar na pagina
 
-//Ecercício 4:
+//Exercício 4:
 
 function buttonCreate(buttonContainer, buttonName, buttonID) {
   const buttonParagrafo = document.createElement("p"); // cria o paragrafo do botão
   const button = document.createElement("button"); // cira a tag button
   button.id = buttonID; // coloca id no botão
   button.appendChild(buttonParagrafo).innerText = buttonName; // coloca o nome no botão
-  buttonContainer.appendChild(button); //Coloca dentro do conteiner
+  buttonContainer.appendChild(button); //Coloca como filho do conteiner
 }
 
-buttonCreate(conteinerBotao, "Sexta-feira", "btn-friday") // adiciona todos os parametos para criar um botão com id
+buttonCreate(conteinerBotao, "Sexta-feira", "btn-friday"); // adiciona todos os parametos para criar um botão com id
+
+//Exercício 5:
+function fridayDay(dias) {
+  let buttonFryday = document.querySelector("#btn-friday"); // Captura o Botão
+  let dayFriday = document.querySelectorAll(".friday"); // Captura todos as classes que tem a tag
+  let fridaySim = "SEXTOU 🎉";
+  buttonFryday.addEventListener("click", function () {
+    for (let index = 0; index < dayFriday.length; index += 1) {
+      if (dayFriday[index].innerText === fridaySim) {
+        dayFriday[index].innerText = dias[index];
+      } else {
+        dayFriday[index].innerText = fridaySim;
+      }
+    }
+  });
+}
+let sextas = [4, 11, 18, 25];
+fridayDay(sextas);
