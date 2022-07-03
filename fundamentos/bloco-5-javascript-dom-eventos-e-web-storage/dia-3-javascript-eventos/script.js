@@ -138,4 +138,16 @@ function criadorDeSpan(cozinhar) {
   tarefas.appendChild(createSpan);
 }
 
-criadorDeSpan('oi')
+criadorDeSpan('oi');
+
+// Exercício 8:
+
+function adicioneUmaDiv (cor){
+  let tarefas = document.querySelector(".my-tasks");
+  let createDiv = document.createElement('div');
+  createDiv.className = 'task';
+  createDiv.style.backgroundColor = cor;
+  tarefas.appendChild(createDiv);
+}
+
+adicioneUmaDiv("blue");
