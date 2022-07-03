@@ -168,3 +168,27 @@ function selecioneTarefa() {
 }
 
 selecioneTarefa();
+
+// Exercício 10:
+
+function diaCor() {
+  let selecionarTask = document.getElementsByClassName("task selected"); // Retorna um array com todos os elementos com a classe "task selected"
+  let dias = document.querySelector("#days"); // Seleciona a primeira ul com id "days"
+  let taskDiv = document.querySelector(".task"); // Seleciona o primeiro elemento com a classe "task"
+  let colorTask = taskDiv.style.backgroundColor; // Salva o Background Color da classe task na variável "colorTask"
+
+  // Para pegar o evento alvo, precisamos declarar o evento como parâmetro da função
+  dias.addEventListener("click", function (event) {
+    let corDoEvendo = event.target.style.color;
+    // Caso não houver nenhum elemento com a classe "task selected" E o evento alvo não tiver a mesma cor de fundo da variável "colorTask"
+    if (selecionarTask.length > 0 && corDoEvendo !== colorTask) {
+      let color = selecionarTask[0].style.backgroundColor; // Pega a cor de fundo do primeiro elemento salvo na variável "elecionarTask" e salva na variável "color"
+      event.target.style.color = color; // atribui a cor salva na variável "color" ao evento alvo
+      // Caso a cor do evento alvo seja igual à da variável "colorTask"
+    } else if (corDoEvendo === colorTask) {
+      event.target.style.color = "rgb(119,119,119)"; // Altera a cor de fundo do evento alvo para "rgb(119, 119, 119)"
+    }
+  });
+}
+
+diaCor();
