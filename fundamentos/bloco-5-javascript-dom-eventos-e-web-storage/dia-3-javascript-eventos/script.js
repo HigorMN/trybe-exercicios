@@ -127,3 +127,15 @@ function font(tamanho, event) {
 }
 
 daysZoom();
+
+// Exercício 7:
+
+function criadorDeSpan(cozinhar) {
+  let tarefas = document.querySelector(".my-tasks");
+  let createSpan = document.createElement("span");
+
+  createSpan.innerText = cozinhar;
+  tarefas.appendChild(createSpan);
+}
+
+criadorDeSpan('oi')
