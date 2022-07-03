@@ -192,3 +192,37 @@ function diaCor() {
 }
 
 diaCor();
+
+function addNewTask() {
+  let getInputField = document.querySelector("#task-input"); // seleciona o input que tem o id "task-input"
+  let addInputButton = document.querySelector("#btn-add"); // seleciona o botão de adicionar que tem o id "btn-add"
+  let getTaskList = document.querySelector(".task-list"); // seleciona uma ul lista não ordenada
+  // função ao clicar no botão adicionar
+  addInputButton.addEventListener("click", function () {
+    // se o input tiver o valor maior que 0
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement("li"); //cria uma li
+      newLi.innerText = getInputField.value; //adiciona a li o valor que ta no input
+
+      getTaskList.appendChild(newLi); // coloca como filho da lista não ordenada
+      getInputField.value = ""; // o valor é igual a uma string se não não funciona a lista
+      // se não tiver nada ele abre uma caixa de alerta com erro
+    } else {
+      alert("Error: Digite ao menos 1 caractere.");
+    }
+  });
+
+  // função pra adicionar um evento no enter
+  getInputField.addEventListener("keyup", function (event) {
+    // caso a tecla seja igual ao ENTER e o valor do da caixa for maior que 0
+    if (event.key === "Enter" && getInputField.value.length > 0) {
+      let newLi = document.createElement("li"); // cria uma li
+      newLi.innerText = getInputField.value; // coloca o que ta no input e armazena na li
+
+      getTaskList.appendChild(newLi); // cria um filho li pra a ul
+      getInputField.value = ""; // e o valor é igual a uma string
+    }
+  });
+}
+
+addNewTask();
