@@ -138,16 +138,33 @@ function criadorDeSpan(cozinhar) {
   tarefas.appendChild(createSpan);
 }
 
-criadorDeSpan('oi');
+criadorDeSpan("oi");
 
 // Exercício 8:
 
-function adicioneUmaDiv (cor){
+function adicioneUmaDiv(cor) {
   let tarefas = document.querySelector(".my-tasks");
-  let createDiv = document.createElement('div');
-  createDiv.className = 'task';
+  let createDiv = document.createElement("div");
+  createDiv.className = "task";
   createDiv.style.backgroundColor = cor;
   tarefas.appendChild(createDiv);
 }
 
 adicioneUmaDiv("blue");
+
+// Exercício 9:
+
+function selecioneTarefa() {
+  let selecionarTask = document.getElementsByClassName("task selected");
+  let asTasks = document.querySelector(".task");
+
+  asTasks.addEventListener("click", function (event) {
+    if (selecionarTask.length === 0) {
+      event.target.className = "task selected";
+    } else {
+      event.target.className = "task";
+    }
+  });
+}
+
+selecioneTarefa();
