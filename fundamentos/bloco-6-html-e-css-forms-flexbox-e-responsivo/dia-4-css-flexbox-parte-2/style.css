@@ -26,7 +26,7 @@
     display: flex;
     width: 500px;
     flex-grow: 1;
-    align-self: center;
+    justify-content: center;
   }
   
   .menu-container ul {
@@ -51,6 +51,7 @@
   .movie-container {
     display: flex;
     flex-direction: column;
+    width: 700px;
   }
   
   .movie-container h2 {
@@ -72,6 +73,7 @@
     height: 150px;
     justify-content: center;
     margin: 10px;
+    width: 16%;
   }
   
   .aside-container {
