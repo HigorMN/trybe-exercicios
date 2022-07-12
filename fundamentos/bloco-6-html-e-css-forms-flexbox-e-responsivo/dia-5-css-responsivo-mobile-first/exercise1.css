@@ -47,6 +47,8 @@
     font-size: .8em;
   }
 
-  @media screen and (min-width: 472px){
-    
+  @media screen and (min-width: 474px){
+    body {
+        background-color: aquamarine;
+    }
   }
