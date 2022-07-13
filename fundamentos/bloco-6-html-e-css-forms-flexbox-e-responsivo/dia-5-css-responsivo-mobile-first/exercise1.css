@@ -69,5 +69,6 @@ figcaption {
     body {
         background-color: cornflowerblue;
         font-size: 28px;
+        margin: 15px;
     }
 }
