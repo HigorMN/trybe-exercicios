@@ -68,5 +68,6 @@ figcaption {
 @media screen and (min-width: 992px) {
     body {
         background-color: cornflowerblue;
+        font-size: 28px;
     }
 }
