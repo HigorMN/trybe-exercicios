@@ -66,9 +66,19 @@ figcaption {
 }
 
 @media screen and (min-width: 992px) {
-    body {
-        background-color: cornflowerblue;
-        font-size: 28px;
-        margin: 15px;
-    }
+  body {
+    background-color: cornflowerblue;
+    font-size: 28px;
+    margin: 15px;
+    max-width: 992px;
+    margin: auto;
+  }
+  figure {
+    width: 33%;
+    padding: 10px;
+  }
+
+  figcaption {
+    font-size: 30px;
+  }
 }
