@@ -38,14 +38,24 @@ function fatorial(num) {
 console.log(fatorial(10));
 
 function longestWord(string) {
-    let maior = "";
-    
-    string.split(" ").forEach(word => {
-      if (word.trim().length > maior.length) {
-        maior = word.trim();
-      }
-    });
-    return maior;
+  let maior = "";
+
+  string.split(" ").forEach((word) => {
+    if (word.trim().length > maior.length) {
+      maior = word.trim();
+    }
+  });
+  return maior;
 }
 
-console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
+console.log(
+  longestWord("Antônio foi no banheiro e não sabemos o que aconteceu")
+);
+
+function trocarX(nome) {
+  const frase = "Tryber x aqui!";
+  resultado = frase.replace("x", nome);
+  return resultado;
+}
+
+console.log(trocarX('Bebeto'));
