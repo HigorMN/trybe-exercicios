@@ -35,4 +35,17 @@ function fatorial(num) {
   return resultado;
 }
 
-console.log(fatorial(5));
+console.log(fatorial(10));
+
+function longestWord(string) {
+    let maior = "";
+    
+    string.split(" ").forEach(word => {
+      if (word.trim().length > maior.length) {
+        maior = word.trim();
+      }
+    });
+    return maior;
+}
+
+console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
