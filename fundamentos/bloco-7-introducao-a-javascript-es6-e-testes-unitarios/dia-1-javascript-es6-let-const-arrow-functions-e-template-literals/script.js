@@ -16,10 +16,23 @@ const testingScope = (escopo) =>
 
 testingScope(true);
 
-const order = (a, b) => a - b
+const order = (a, b) => a - b;
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 oddsAndEvens.sort(order);
 
+console.log(
+  `Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`
+); // será necessário alterar essa linha 😉
 
-console.log(`Os números ${oddsAndEvens}`); // será necessário alterar essa linha 😉
+function fatorial(num) {
+  let resultado = 1;
+  let cont = 1;
+  while (cont <= num) {
+    resultado *= cont;
+    cont++;
+  }
+  return resultado;
+}
+
+console.log(fatorial(5));
