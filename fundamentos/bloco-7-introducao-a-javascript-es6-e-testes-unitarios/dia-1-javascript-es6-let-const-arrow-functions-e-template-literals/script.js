@@ -54,8 +54,16 @@ console.log(
 
 function trocarX(nome) {
   const frase = "Tryber x aqui!";
-  resultado = frase.replace("x", nome);
+  let resultado = frase.replace("x", nome);
   return resultado;
 }
 
-console.log(trocarX('Bebeto'));
+function habi(h1, h2, h3) {
+  let resultado = `Minhas três principais habilidades são:
+  ${h1}
+  ${h2}
+  ${h3}`;
+  return resultado;
+}
+console.log(`${trocarX("Bebeto")}
+${habi('JavaScript', 'HTML', 'CSS')}`);
