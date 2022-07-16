@@ -91,17 +91,34 @@ console.log(listarValoresObjetos(lesson3));
 
 // 5. Crie um objeto de nome allLessons, que deve agrupar todas as aulas através do Object.assign. Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1, lesson2 e lesson3. Ao executar o comando console.log(allLessons), a saída deverá ser a seguinte:
 
-const allLessons = Object.assign({lesson1}, {lesson2}, {lesson3});
+const allLessons = Object.assign({ lesson1 }, { lesson2 }, { lesson3 });
 console.log(allLessons);
 
 // 6. Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
 
 const numeroTotalDosEstudantes = (objeto) => {
-    return objeto.lesson3.numeroEstudantes + objeto.lesson1.numeroEstudantes + objeto.lesson3.numeroEstudantes
-}
+  return (
+    objeto.lesson3.numeroEstudantes +
+    objeto.lesson1.numeroEstudantes +
+    objeto.lesson3.numeroEstudantes
+  );
+};
 console.log(`No total são ${numeroTotalDosEstudantes(allLessons)} estudantes.`);
 
 // 7. Crie uma função que obtenha o valor da chave de acordo com o seu índice no objeto. Por exemplo:
 
-const valorChave = (objeto, valor) => Object.values(objeto)[valor]
+const valorChave = (objeto, valor) => Object.values(objeto)[valor];
 console.log(valorChave(lesson1, 0));
+
+// Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
+
+function verificarChaveEValor(objeto, chave, valor) {
+  const arm = Object.entries(objeto);
+  let valorInicial = false;
+  for (let index in arm) {
+    if (arm[index][0] === chave && arm[index][1] === valor) valorInicial = true;
+  }
+  return valorInicial;
+}
+
+console.log(verificarChaveEValor(lesson3, "numeroEstudantes", 10));
