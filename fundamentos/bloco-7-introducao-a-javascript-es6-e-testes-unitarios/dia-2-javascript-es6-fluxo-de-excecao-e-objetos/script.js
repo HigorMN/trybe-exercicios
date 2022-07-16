@@ -100,3 +100,8 @@ const numeroTotalDosEstudantes = (objeto) => {
     return objeto.lesson3.numeroEstudantes + objeto.lesson1.numeroEstudantes + objeto.lesson3.numeroEstudantes
 }
 console.log(`No total são ${numeroTotalDosEstudantes(allLessons)} estudantes.`);
+
+// 7. Crie uma função que obtenha o valor da chave de acordo com o seu índice no objeto. Por exemplo:
+
+const valorChave = (objeto, valor) => Object.values(objeto)[valor]
+console.log(valorChave(lesson1, 0));
