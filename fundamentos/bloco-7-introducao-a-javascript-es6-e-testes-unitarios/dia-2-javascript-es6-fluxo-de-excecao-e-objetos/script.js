@@ -75,3 +75,7 @@ const lesson3 = {
 const addTurno = (objeto, chave, valor) => (objeto[chave] = valor);
 
 addTurno(lesson2, "Turno", "noite");
+
+const keysObjets = (objeto) => Object.keys(objeto);
+
+console.log(keysObjets(lesson1));
