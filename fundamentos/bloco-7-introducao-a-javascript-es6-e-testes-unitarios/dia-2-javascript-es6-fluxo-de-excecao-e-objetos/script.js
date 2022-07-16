@@ -43,7 +43,35 @@ console.log(customerInfo(order));
 const orderModifier = () => {
   order.name = "Luiz Silva";
   order.payment.total = 50;
-  return `Olá ${order.name}, o total do seu pedido de ${Object.keys(order.order.pizza)} e ${order.order.drinks.coke.type} é R$ ${order.payment.total.toFixed(2)}`
+  return `Olá ${order.name}, o total do seu pedido de ${Object.keys(
+    order.order.pizza
+  )} e ${order.order.drinks.coke.type} é R$ ${order.payment.total.toFixed(2)}`;
 };
 
 console.log(orderModifier(order));
+
+const lesson1 = {
+  materia: "Matemática",
+  numeroEstudantes: 20,
+  professor: "Maria Clara",
+  turno: "manhã",
+};
+
+const lesson2 = {
+  materia: "História",
+  numeroEstudantes: 20,
+  professor: "Carlos",
+};
+
+const lesson3 = {
+  materia: "Matemática",
+  numeroEstudantes: 10,
+  professor: "Maria Clara",
+  turno: "noite",
+};
+
+// Crie uma função para adicionar o turno da noite na lesson2. Essa função deve possuir três parâmetros, sendo eles: o objeto a ser modificado, a chave que deverá ser adicionada e o valor dela.
+
+const addTurno = (objeto, chave, valor) => (objeto[chave] = valor);
+
+addTurno(lesson2, "Turno", "noite");
