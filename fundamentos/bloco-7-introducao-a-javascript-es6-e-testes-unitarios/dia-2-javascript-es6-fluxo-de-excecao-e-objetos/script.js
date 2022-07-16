@@ -110,7 +110,7 @@ console.log(`No total são ${numeroTotalDosEstudantes(allLessons)} estudantes.`)
 const valorChave = (objeto, valor) => Object.values(objeto)[valor];
 console.log(valorChave(lesson1, 0));
 
-// Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
+// 8. Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
 
 function verificarChaveEValor(objeto, chave, valor) {
   const arm = Object.entries(objeto);
@@ -122,3 +122,19 @@ function verificarChaveEValor(objeto, chave, valor) {
 }
 
 console.log(verificarChaveEValor(lesson3, "numeroEstudantes", 10));
+
+//Bônus
+// 1. 🚀 Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+
+const nEstudantesM = (objeto) => {
+    let total = 0;
+    const array = Object.keys(objeto);
+    for (index in array) {
+      if(objeto[array[index]].materia === 'Matemática'){
+      total += objeto[array[index]].numeroEstudantes;
+      }
+    }
+    return total;
+  }
+
+  console.log(nEstudantesM(allLessons));
