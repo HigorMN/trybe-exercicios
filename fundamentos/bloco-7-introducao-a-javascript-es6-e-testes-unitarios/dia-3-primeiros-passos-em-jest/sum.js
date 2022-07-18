@@ -15,4 +15,4 @@ function myRemove(arr, item) {
   return newArr;
 }
 
-module.exports = {sum, myRemove};
+module.exports = { sum, myRemove };
