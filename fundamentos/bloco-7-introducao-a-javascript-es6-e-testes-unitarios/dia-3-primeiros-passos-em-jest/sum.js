@@ -23,7 +23,27 @@ function myFizzBuzz(num) {
   return num;
 }
 
-const encode = () => {};
+const encode = (vA, vE, vI, vO, vU) => {
+  const result = [];
+  if (vA === "a") {
+    result.push(1);
+  }
+  if (vE === "e") {
+    result.push(2);
+  }
+  if (vI === "i") {
+    result.push(3);
+  }
+  if (vO === "o") {
+    result.push(4);
+  }
+  if (vU === "u") {
+    result.push(5);
+  }
+  return result;
+};
+
+console.log(encode("a", "e", "i", "o", "u"));
 
 const decode = () => {};
 
