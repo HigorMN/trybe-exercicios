@@ -40,4 +40,8 @@ describe(`3 - A função myFizzBuzz(num) recebe um número num e retorna "fizzbu
   it("Faça uma chamada com um número divisível por 5 e verifique se o retorno é o esperado", () => {
     expect(myFizzBuzz(5)).toBe("buzz");
   });
+
+  it("Faça uma chamada com um número que não é divisível por 3 ou 5 e verifique se o retorno é o esperado", () => {
+    expect(myFizzBuzz(2)).toBe(2);
+  });
 });
