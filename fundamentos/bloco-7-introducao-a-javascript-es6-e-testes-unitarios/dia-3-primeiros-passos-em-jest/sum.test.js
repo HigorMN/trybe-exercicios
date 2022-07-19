@@ -62,4 +62,12 @@ describe("4 - Para as funções encode e decode crie os seguintes testes em Jest
   it("Para a função decode teste se os números 1, 2, 3, 4 e 5 são convertidos nas vogais a, e, i, o, u, respectivamente;", () => {
     expect(decode(1, 2, 3, 4, 5)).toEqual(["a", "e", "i", "o", "u"]);
   });
+
+  it("Teste se as demais letras/números não são convertidos para cada caso;", () => {
+    expect(() => decode('')).toThrow('Use penas numeros')
+  })
+
+  it("Teste se as demais letras/números não são convertidos para cada caso;", () => {
+    expect(() => encode(1)).toThrow('Use string')
+  })
 });

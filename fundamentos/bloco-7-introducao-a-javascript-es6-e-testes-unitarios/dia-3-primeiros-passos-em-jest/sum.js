@@ -24,6 +24,15 @@ function myFizzBuzz(num) {
 }
 
 const encode = (vA, vE, vI, vO, vU) => {
+  if (
+    typeof vA !== "string" ||
+    typeof vE !== "string" ||
+    typeof vI !== "string" ||
+    typeof vO !== "string" ||
+    typeof vU !== "string"
+  ) {
+    throw new Error("Use string");
+  }
   const result = [];
   if (vA === "a") {
     result.push(1);
@@ -44,6 +53,15 @@ const encode = (vA, vE, vI, vO, vU) => {
 };
 
 const decode = (n1, n2, n3, n4, n5) => {
+  if (
+    typeof n1 !== "number" ||
+    typeof n2 !== "number" ||
+    typeof n3 !== "number" ||
+    typeof n4 !== "number" ||
+    typeof n5 !== "number"
+  ) {
+    throw new Error("Use penas numeros");
+  }
   const result = [];
   if (n1 === 1) {
     result.push("a");
@@ -62,7 +80,5 @@ const decode = (n1, n2, n3, n4, n5) => {
   }
   return result;
 };
-
-console.log(decode(1, 2, 3, 4, 5));
 
 module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
