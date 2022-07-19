@@ -1,4 +1,4 @@
-const { sum, myRemove, myFizzBuzz } = require("./sum.js");
+const { sum, myRemove, myFizzBuzz, encode, decode } = require("./sum.js");
 
 describe("1 - A função sum(a, b) retorna a soma do parâmetro a com o b", () => {
   test("Teste se o retorno de sum(4, 5) é 9", () => {
@@ -46,6 +46,12 @@ describe(`3 - A função myFizzBuzz(num) recebe um número num e retorna "fizzbu
   });
 
   it("Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado", () => {
-    expect(myFizzBuzz('2')).toBe(false);
+    expect(myFizzBuzz("2")).toBe(false);
+  });
+});
+
+describe("4 - Para as funções encode e decode crie os seguintes testes em Jest:", () => {
+  it("Teste se encode e decode são funções;", () => {
+    expect(typeof encode && typeof decode).toBe("function");
   });
 });

@@ -23,4 +23,8 @@ function myFizzBuzz(num) {
   return num;
 }
 
-module.exports = { sum, myRemove, myFizzBuzz };
+const encode = () => {};
+
+const decode = () => {};
+
+module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
