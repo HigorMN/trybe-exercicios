@@ -64,10 +64,10 @@ describe("4 - Para as funções encode e decode crie os seguintes testes em Jest
   });
 
   it("Teste se as demais letras/números não são convertidos para cada caso;", () => {
-    expect(() => decode('')).toThrow('Use penas numeros')
-  })
+    expect(() => decode("")).toThrow("Use penas numeros");
+  });
 
   it("Teste se as demais letras/números não são convertidos para cada caso;", () => {
-    expect(() => encode(1)).toThrow('Use string')
-  })
+    expect(() => encode(1)).toThrow("Use string");
+  });
 });
