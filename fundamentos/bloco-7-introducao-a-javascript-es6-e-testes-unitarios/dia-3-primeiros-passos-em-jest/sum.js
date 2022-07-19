@@ -43,8 +43,26 @@ const encode = (vA, vE, vI, vO, vU) => {
   return result;
 };
 
-console.log(encode("a", "e", "i", "o", "u"));
+const decode = (n1, n2, n3, n4, n5) => {
+  const result = [];
+  if (n1 === 1) {
+    result.push("a");
+  }
+  if (n2 === 2) {
+    result.push("e");
+  }
+  if (n3 === 3) {
+    result.push("i");
+  }
+  if (n4 === 4) {
+    result.push("o");
+  }
+  if (n5 === 5) {
+    result.push("u");
+  }
+  return result;
+};
 
-const decode = () => {};
+console.log(decode(1, 2, 3, 4, 5));
 
 module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
