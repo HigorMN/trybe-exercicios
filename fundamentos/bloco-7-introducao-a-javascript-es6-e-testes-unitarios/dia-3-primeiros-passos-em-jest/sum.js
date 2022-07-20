@@ -82,3 +82,13 @@ const decode = (n1, n2, n3, n4, n5) => {
 };
 
 module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
+
+//Testes
+
+function numeros(arr) {
+  for (let index = 0; index < arr.length; index += 1) {
+    console.log(arr[index]);
+  }
+}
+
+numeros([1, 2, 5, 7, 8]);
