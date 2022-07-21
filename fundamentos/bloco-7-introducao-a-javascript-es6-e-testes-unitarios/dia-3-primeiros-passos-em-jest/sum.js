@@ -82,3 +82,16 @@ const decode = (n1, n2, n3, n4, n5) => {
 };
 
 module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
+
+//Testes
+
+function numeros(luisa, isabel) {
+  let result = '';
+
+  if(luisa > isabel){
+    result = 'luisa tem o pesao'
+  }
+  return result;
+}
+
+console.log(numeros(39, 38)); ;
