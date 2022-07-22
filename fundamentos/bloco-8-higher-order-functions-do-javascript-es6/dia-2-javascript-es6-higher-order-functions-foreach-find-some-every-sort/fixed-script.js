@@ -48,4 +48,15 @@ function findMusic(id) {
   return musicas.find(() => id === "31031685");
 }
 
-console.log(findMusic("31031685"));
+// console.log(findMusic("31031685"));
+
+// Array.some e Array.every
+// 1 - Escreva uma função que dado um array de nomes e um nome retorne true se ele estiver contido e caso contrário, retorne false, use some;
+
+const nomes = ["Mateus", "José", "Ana", "Cláudia", "Bruna"];
+
+const hasName = (arr, name) => {
+  return arr.some((nome) => nome === name);
+};
+
+console.log(hasName(nomes, "Chico"));
