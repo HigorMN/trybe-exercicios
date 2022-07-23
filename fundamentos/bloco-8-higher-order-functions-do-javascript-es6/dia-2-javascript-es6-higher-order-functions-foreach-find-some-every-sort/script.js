@@ -49,7 +49,7 @@ const books = [
     genre: "Terror",
     author: {
       name: "Stephen King",
-      birthYear: 1947, 
+      birthYear: 1947,
     },
     releaseYear: 1986,
   },
@@ -126,4 +126,14 @@ function everyoneWasBornOnSecXX(objeto) {
   );
 }
 
-console.log(everyoneWasBornOnSecXX(books));
+// console.log(everyoneWasBornOnSecXX(books));
+
+//🚀 6 - Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+
+function someBookWasReleaseOnThe80s(objeto) {
+  return objeto.some(
+    (livro) => livro.releaseYear >= 1980 && livro.releaseYear < 1990
+  );
+}
+
+console.log(someBookWasReleaseOnThe80s(books));
