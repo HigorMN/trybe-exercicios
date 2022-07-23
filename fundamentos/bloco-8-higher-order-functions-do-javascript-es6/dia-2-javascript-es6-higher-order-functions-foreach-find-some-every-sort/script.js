@@ -49,7 +49,7 @@ const books = [
     genre: "Terror",
     author: {
       name: "Stephen King",
-      birthYear: 1947,
+      birthYear: 1947, 
     },
     releaseYear: 1986,
   },
@@ -115,4 +115,15 @@ function booksOrderedByReleaseYearDesc(objeto) {
   return objeto.sort((a, b) => b.releaseYear - a.releaseYear);
 }
 
-console.log(booksOrderedByReleaseYearDesc(books));
+// console.log(booksOrderedByReleaseYearDesc(books));
+
+//🚀 5 - Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
+
+function everyoneWasBornOnSecXX(objeto) {
+  return objeto.every(
+    (seculo) =>
+      seculo.author.birthYear >= 1900 && seculo.author.birthYear < 2000
+  );
+}
+
+console.log(everyoneWasBornOnSecXX(books));
