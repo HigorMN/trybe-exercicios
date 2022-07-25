@@ -64,7 +64,7 @@ const books = [
 // 🚀 1 - Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
 function formatedBookNames(arrayBooks) {
   return arrayBooks.map(
-    (books) => `${books.name} - ${books.genre} - ${books.author.name}`
+    (book) => `${book.name} - ${book.genre} - ${book.author.name}`
   );
 }
 
@@ -93,4 +93,14 @@ function fantasyOrScienceFiction(arrayBooks) {
   });
 }
 
-console.log(fantasyOrScienceFiction(books));
+// console.log(fantasyOrScienceFiction(books));
+
+//🚀 4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
+
+function oldBooksOrdered(arrayBooks) {
+  const livros = arrayBooks.filter((book) => 2022 - book.releaseYear > 60);
+  livros.sort((a, b) => a.releaseYear - b.releaseYear);
+  return livros;
+}
+
+console.log(oldBooksOrdered(books));
