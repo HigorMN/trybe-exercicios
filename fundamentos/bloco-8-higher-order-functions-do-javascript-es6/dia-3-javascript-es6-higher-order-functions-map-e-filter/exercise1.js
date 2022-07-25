@@ -108,11 +108,21 @@ function oldBooksOrdered(arrayBooks) {
 //🚀 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
 
 function fantasyOrScienceFictionAuthors(arrayBooks) {
-  const booksGenre = arrayBooks.filter((book) => {
-    return book.genre === "Ficção Científica" || book.genre === "Fantasia";
-  });
-  const booksAuthorNames = booksGenre.map((bookAuthor) => bookAuthor.author.name).sort();
+  const booksGenre = fantasyOrScienceFiction(arrayBooks);
+  const booksAuthorNames = booksGenre
+    .map((bookAuthor) => bookAuthor.author.name)
+    .sort();
   return booksAuthorNames;
 }
 
-console.log(fantasyOrScienceFictionAuthors(books));
+// console.log(fantasyOrScienceFictionAuthors(books));
+
+// 🚀 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+function oldBooks(arrayBooks) {
+  const book60 = oldBooksOrdered(arrayBooks);
+  const bookNames60 = book60.map((bookNames) => bookNames.name);
+  return bookNames60;
+}
+
+console.log(oldBooks(books));
