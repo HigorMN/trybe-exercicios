@@ -79,13 +79,27 @@ const books = [
 
 // const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
 
-function reduceNames(arrayToBooks) {
-  return arrayToBooks.reduce((acc, curr, index, array) => {
+function reduceNames(arrayOfBooks) {
+  return arrayOfBooks.reduce((acc, curr, index, array) => {
     if (index === array.length - 1) {
       return `${acc} ${curr.author.name}.`;
     }
     return `${acc} ${curr.author.name},`;
-  }, '');
+  }, "");
 }
 
-console.log(reduceNames(books));
+// console.log(reduceNames(books));
+
+// 🚀 3- Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
+
+// const expectedResult = 43;
+
+function averageAge() {
+  return (
+    books.reduce((acc, curr, i, array) => {
+      return acc + curr.releaseYear - curr.author.birthYear;
+    }, 0) / books.length
+  );
+}
+
+console.log(averageAge());
