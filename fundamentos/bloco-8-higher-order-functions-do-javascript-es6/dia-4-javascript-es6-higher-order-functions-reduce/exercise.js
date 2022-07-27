@@ -102,4 +102,52 @@ function averageAge() {
   );
 }
 
-console.log(averageAge());
+// console.log(averageAge());
+
+//🚀 4- Encontre o livro com o maior nome.
+
+// const expectedResult = {
+//     id: 1,
+//     name: 'As Crônicas de Gelo e Fogo',
+//     genre: 'Fantasia',
+//     author: {
+//       name: 'George R. R. Martin',
+//       birthYear: 1948,
+//     },
+//     releaseYear: 1991,
+//   };
+
+function longestNamedBook() {
+  return books.reduce((acc, curr) => {
+    if (acc.name.length > curr.name.length) {
+      return acc;
+    }
+    return curr;
+  });
+}
+
+// console.log(longestNamedBook());
+
+// 🚀 5- Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
+
+const names = [
+  "Aanemarie",
+  "Adervandes",
+  "Akifusa",
+  "Abegildo",
+  "Adicellia",
+  "Aladonata",
+  "Abeladerco",
+  "Adieidy",
+  "Alarucha",
+];
+
+function containsA() {
+ return names.reduce((acc, curr) => {
+    acc['aMaiuscula'] += curr.split('').filter((a) => a === 'A').length
+    acc['aMinuscula'] += curr.split('').filter((a) => a === 'a').length
+    return acc
+  }, { aMaiuscula: 0, aMinuscula: 0 });
+}
+
+console.log(containsA());
