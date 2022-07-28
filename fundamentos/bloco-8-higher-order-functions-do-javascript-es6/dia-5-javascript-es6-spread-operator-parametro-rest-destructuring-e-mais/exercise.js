@@ -27,21 +27,65 @@ const sum = (...rectangle) =>
 // Dica: use object destructuring.
 
 const alex = {
-    name: 'Alex',
-    age: 26,
-    likes: ['fly fishing'],
-    nationality: 'Australian',
-  };
-  
-  const gunnar = {
-    name: 'Gunnar',
-    age: 30,
-    likes: ['hiking', 'scuba diving', 'taking pictures'],
-    nationality: 'Icelandic',
-  };
-  
-  // complete a assinatura da função abaixo
-  const personLikes = ({name, age, likes}) => `${name} is ${age} years old and likes ${likes.join(', ')}.`;
-  
-  console.log(personLikes(alex)); // 'Alex is 26 years old and likes fly fishing.'
-  console.log(personLikes(gunnar)); // 'Gunnar is 30 years old and likes hiking, scuba diving, taking pictures.'
+  name: "Alex",
+  age: 26,
+  likes: ["fly fishing"],
+  nationality: "Australian",
+};
+
+const gunnar = {
+  name: "Gunnar",
+  age: 30,
+  likes: ["hiking", "scuba diving", "taking pictures"],
+  nationality: "Icelandic",
+};
+
+// complete a assinatura da função abaixo
+const personLikes = ({ name, age, likes }) =>
+  `${name} is ${age} years old and likes ${likes.join(", ")}.`;
+
+// console.log(personLikes(alex)); // 'Alex is 26 years old and likes fly fishing.'
+// console.log(personLikes(gunnar)); // 'Gunnar is 30 years old and likes hiking, scuba diving, taking pictures.'
+
+//🚀 4 - Escreva uma função filterPeople que, dada uma lista de pessoas, retorna todas as pessoas australianas que nasceram no século 20:
+
+//Dica: use object destructuring.
+
+const people = [
+  {
+    name: "Nicole",
+    bornIn: 1992,
+    nationality: "Australian",
+  },
+  {
+    name: "Harry",
+    bornIn: 2008,
+    nationality: "Australian",
+  },
+  {
+    name: "Toby",
+    bornIn: 1901,
+    nationality: "Australian",
+  },
+  {
+    name: "Frida",
+    bornIn: 1960,
+    nationality: "Dannish",
+  },
+  {
+    name: "Fernando",
+    bornIn: 2001,
+    nationality: "Brazilian",
+  },
+];
+
+// escreva filterPeople abaixo
+
+const filterPeople = (arrayOfPeople) => {
+  return arrayOfPeople.filter(
+    ({ nationality, bornIn }) =>
+      nationality === "Australian" && bornIn >= 1901 && bornIn <= 2000
+  );
+};
+
+console.log(filterPeople(people));
