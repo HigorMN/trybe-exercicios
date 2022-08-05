@@ -1,7 +1,9 @@
 // 1 - Dado o código abaixo, qual a ordem de finalização de execução das linhas comentadas?
 
-const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
-  `${name} is ${value} ${measurementUnit} apart from the Sun`;
+const planetDistanceFromSun = ({
+  name,
+  distanceFromSun: { value, measurementUnit },
+}) => `${name} is ${value} ${measurementUnit} apart from the Sun`;
 
 const mars = {
   name: "Mars",
@@ -42,15 +44,14 @@ const jupiter = {
 const getPlanet = () => {
   setTimeout(() => {
     const mars = {
-      name: 'Mars',
+      name: "Mars",
       distanceFromSun: {
         value: 227900000,
-        measurementUnit: 'kilometers',
+        measurementUnit: "kilometers",
       },
     };
-    console.log('Returned planet: ', mars);
-  }, 4000)
-
+    console.log("Returned planet: ", mars);
+  }, 4000);
 };
 
 getPlanet(); // Imprime Marte depois de 4 segundos
