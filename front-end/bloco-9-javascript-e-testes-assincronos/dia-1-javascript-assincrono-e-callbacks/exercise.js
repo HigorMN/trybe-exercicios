@@ -89,32 +89,71 @@ const getPlanet = () => {
 // A função sendMarsTemperature execute essa callback depois de no máximo 5 segundos.
 // Dica: Lembre-se de nossa função messageDelay para gerar o tempo de espera necessário.
 
+// const messageDelay = () => Math.floor(Math.random() * 5000);
+
+// const getMarsTemperature = () => {
+//   const maxTemperature = 58;
+//   return Math.floor(Math.random() * maxTemperature);
+// };
+
+// // crie a função sendMarsTemperature abaixo
+
+// const toFahrenheit = (degreeCelsius) => degreeCelsius * (9 / 5) + 32;
+
+// const temperatureInFahrenheit = (temperature) =>
+//   console.log(`Atualmente está ${toFahrenheit(temperature)}ºF em Marte`);
+
+// const greet = (temperature) =>
+//   console.log(
+//     `Olá! Curiosity aqui. Nesse momento está ${temperature}ºC em Marte`
+//   );
+
+// const sendMarsTemperature = (callback) => {
+//   const tempo = getMarsTemperature();
+//   setTimeout(() => callback(tempo), messageDelay());
+// };
+
+// Definição da função sendMarsTemperature...
+
+// sendMarsTemperature(temperatureInFahrenheit); // Imprime "Atualmente está 46.4ºF em Marte", por exemplo
+
+// sendMarsTemperature(greet); // Imprime "Olá! Curiosity aqui. Nesse momento são 36ºC em Marte", por exemplo
+
+// 6 - Por fim, o robô Curiosity tem uma taxa de sucesso de envio de mensagem de 60% devido ao fato de o robô já estar muito ocupado com outras operações. Logo, adicione na função sendMarsTemperature uma outra callback que contenha as ações a serem tomadas em caso de falha
+
 const messageDelay = () => Math.floor(Math.random() * 5000);
 
 const getMarsTemperature = () => {
   const maxTemperature = 58;
   return Math.floor(Math.random() * maxTemperature);
-};
+}
 
-// crie a função sendMarsTemperature abaixo
-
-const toFahrenheit = (degreeCelsius) => degreeCelsius * (9 / 5) + 32;
+const toFahrenheit = (degreeCelsius) => (degreeCelsius * (9 / 5)) + 32;
 
 const temperatureInFahrenheit = (temperature) =>
-  console.log(`Atualmente está ${toFahrenheit(temperature)}ºF em Marte`);
+  console.log(`It is currently ${toFahrenheit(temperature)}ºF at Mars`);
 
 const greet = (temperature) =>
-  console.log(
-    `Olá! Curiosity aqui. Nesse momento está ${temperature}ºC em Marte`
-  );
+  console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
 
-const sendMarsTemperature = (callback) => {
-  const tempo = getMarsTemperature();
-  setTimeout(() => callback(tempo), messageDelay());
-};
+const handleError = (errorReason) =>
+  console.log(`Error getting temperature: ${errorReason}`);
 
-// Definição da função sendMarsTemperature...
+// definição da função sendMarsTemperature...
+const sendMarsTemperature = (callbackSuccess, callbackError) => {
+  const tempo = getMarsTemperature()
+  const messageSuccessfullySent = Math.random() <= 0.6; // randomiza true ou false até 60%
+  setTimeout(() => {
+    if (messageSuccessfullySent) {
+      callbackSuccess(tempo)
+    } else {
+      callbackError('Robo não conseguio enviar a mensagem')
+    }
+  }, messageDelay())
+}
 
-sendMarsTemperature(temperatureInFahrenheit); // Imprime "Atualmente está 46.4ºF em Marte", por exemplo
+// imprime "It is currently 47ºF at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
+sendMarsTemperature(temperatureInFahrenheit, handleError);
 
-sendMarsTemperature(greet); // Imprime "Olá! Curiosity aqui. Nesse momento são 36ºC em Marte", por exemplo
+// imprime "Hi there! Curiosity here. Right now is 53ºC at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
+sendMarsTemperature(greet, handleError);
