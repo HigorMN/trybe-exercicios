@@ -206,4 +206,4 @@ const handlePokemonSearch = (error, message) => {
 
 // OBS: Lembre-se de exportar o arquivo do exercício 08 para que possamos utilizá-lo em nossos testes.
 
-module.exports = handlePokemonSearch
+module.exports = getPokemonDetails
