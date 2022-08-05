@@ -1,8 +1,8 @@
 {
-  "name": "testes",
+  "name": "dia-1-javascript-assincrono-e-callbacks",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "exercise.js",
   "scripts": {
     "test": "jest"
   },
