@@ -14,6 +14,7 @@ function App() {
   return (
     <div>
       <About />,
+      <h2>Tarefas</h2>
       <ul>{ tarefas.map(tarefa => Task(tarefa)) }</ul>
     </div>
   );

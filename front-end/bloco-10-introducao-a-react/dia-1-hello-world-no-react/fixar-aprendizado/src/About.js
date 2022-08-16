@@ -8,7 +8,6 @@ class About extends React.Component {
       <div>
         <h1>Higor Maranhão</h1>
         <p>Sou Fullstacks developer</p>
-
         <h2>Minhas Habilidades</h2>
         <ul>{jsxSkills}</ul>
       </div>
