@@ -10,8 +10,8 @@ const Task = (value) => {
 
 function App() {
   return (
-    <About />,
-    Task('Higor')
+      <About />,
+      Task('Higor')
   );
 }
 
