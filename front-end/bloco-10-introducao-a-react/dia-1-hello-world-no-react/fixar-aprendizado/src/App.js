@@ -8,10 +8,14 @@ const Task = (value) => {
   );
 }
 
+const tarefas = ['Acordar', 'Tomar café', 'Escovar os dentes', 'Ir para academia'];
+
 function App() {
   return (
+    <div>
       <About />,
-      Task('Higor')
+      <ul>{ tarefas.map(tarefa => Task(tarefa)) }</ul>
+    </div>
   );
 }
 
