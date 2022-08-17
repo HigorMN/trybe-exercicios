@@ -2,7 +2,7 @@ import React from 'react';
 
 class Image extends React.Component {
   render() {
-    return <img width={500} src={'https://veja.abril.com.br/wp-content/uploads/2019/12/amazonia-floresta-coraccca7ao.jpg.jpg'} alt={'Coração na floresta'} />;
+    return <img src={'https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg'} alt={'Cute cat staring'} />;
   }
 }
 
