@@ -1,0 +1,15 @@
+li {
+    background-color: greenyellow;
+    width: 250px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+    list-style-type: none;
+    transition: 0.5s;
+}
+
+img:hover {
+    border-radius: 50%;
+    transition: 0.2s;
+    background-color: blue;
+}
