@@ -1,19 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function handleClick() {
-  console.log('Clicou no botão!')
-}
+class App extends React.Component {
+  handleClick = () => {
+    console.log('Clicou!')
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <button onClick={handleClick}>Botão</button>
-      </header>
-    </div>
-  );
+  render() {
+    return <button onClick={this.handleClick}>Meu botão</button>
+  }
 }
 
 export default App;
