@@ -28,7 +28,7 @@ class App extends React.Component {
     return (
       <div>
         <button type="button" onClick={ this.handleClick }>Meu Botão</button>
-        <p>Numero de cliques: { numeroDeCliques }</p>
+        <p>Numero de cliques: { numeroDeCliques } { numeroDeCliques % 2 === 0? console.log(numeroDeCliques, 'verde'): '' }</p>
       </div>
     );
   }
