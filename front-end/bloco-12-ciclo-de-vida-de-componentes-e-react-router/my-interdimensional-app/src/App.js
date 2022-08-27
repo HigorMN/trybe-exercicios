@@ -1,31 +1,32 @@
 // App.js
 import React, { Component }from 'react';
 import './App.css';
-import DadJoke from './components/DadJoke';
+// import DadJoke from './components/DadJoke';
+import Randomuser from './components/Randomuser';
 
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-        characters: [],
-    };
-  }
+  // constructor(props){
+  //   super(props);
+  //   this.state = {
+  //       characters: [],
+  //   };
+  // }
 
-  componentDidMount() {
-    fetch('https://rickandmortyapi.com/api/character')
-    .then(response => response.json())
-    .then(data => {
-      this.setState({characters: data.results})
-    })
-  }
+  // componentDidMount() {
+  //   fetch('https://rickandmortyapi.com/api/character')
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     this.setState({characters: data.results})
+  //   })
+  // }
 
 
   render() {
-    const { characters } = this.state;
+    // const { characters } = this.state;
     return (
       <div className="App">
-        <h1>
+        {/* <h1>
           Ricky and Morty Characters:
         </h1>
         <div className="body">
@@ -37,8 +38,9 @@ class App extends Component {
               </div>
             )
           })}
-        </div>
-        <DadJoke />
+        </div> */}
+        {/* <DadJoke /> */}
+        <Randomuser />
       </div>
     );
   }
