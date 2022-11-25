@@ -16,6 +16,11 @@ SELECT SUM(salary) FROM hr.employees;
 
 -- 5. 🚀 Escreva uma query que exiba quatro informações: o maior salário, o menor salário, a soma de todos os salários e a média dos salários. Todos os valores devem ser formatados para ter apenas duas casas decimais.
 
+SELECT 
+    MAX(salary) AS higher_salary, MIN(salary) AS lowest_salary, SUM(salary) AS sum_salary, ROUND(AVG(salary), 2) average_salary
+FROM
+    hr.employees;
+
 -- 6. Escreva uma query que exiba a quantidade de pessoas que trabalham como pessoas programadoras (it_prog).
 
 -- 7. Escreva uma query que exiba a quantidade de dinheiro necessária para efetuar o pagamento de cada profissão (job_id).
