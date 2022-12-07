@@ -27,8 +27,19 @@ async function readAll() {
   strings.forEach((string) => console.log(string));
 }
 
+async function createSimpsonsFamily() {
+  const fileContent = await fs.readFile('./simpsons.json', 'utf-8');
+  const simpsons = JSON.parse(fileContent);
+
+  const familyIds = [1, 2, 3, 4];
+  const simpsonsFamily = simpsons.filter((simpson) => familyIds.includes(+simpson.id));
+
+  await fs.writeFile('./simpsonFamily.json', JSON.stringify(simpsonsFamily));
+}
+
 async function main() {
-  filterSimpsons();
+  createSimpsonsFamily();
+  // filterSimpsons();
   // await readAll();
   // console.log(await getSimpsonById(1));
 }
