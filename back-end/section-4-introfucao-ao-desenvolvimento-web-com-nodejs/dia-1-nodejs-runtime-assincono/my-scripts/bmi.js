@@ -1,7 +1,7 @@
 const readline = require('readline-sync')
 
-const weight = readline.questionInt('What’ your weight? ');
-const height = readline.questionInt('What’ your height? ');
+const weight = readline.questionFloat('What\'s your weight? (kg) ');
+const height = readline.questionInt('What\'s your height? (cm) ');
 
 const BMI = (peso, altura) => {
   console.log(`Peso: ${peso}, Altura: ${altura}`);
