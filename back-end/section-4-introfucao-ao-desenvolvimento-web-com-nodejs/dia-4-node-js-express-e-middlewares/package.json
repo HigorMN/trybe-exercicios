@@ -1,0 +1,18 @@
+{
+  "name": "dia-4-node-js-express-e-middlewares",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17"
+  },
+  "devDependencies": {
+    "nodemon": "2.0"
+  }
+}
