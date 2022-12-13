@@ -4,6 +4,7 @@ const { validateDescription } = require('./middlewares/validateDescription');
 const { validateRating } = require('./middlewares/validateRating');
 const validateName = require('./middlewares/validateName');
 const vilidatePrice = require('./middlewares/validatePrice');
+const { validateDifficulty } = require('./middlewares/validateDifficulty');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.post(
   validateDescription,
   validateCreatedAt,
   validateRating,
+  validateDifficulty,
   (_req, res) => {
     res.status(201).json({ message: 'Atividade cadastrada com sucesso!' });
   }
