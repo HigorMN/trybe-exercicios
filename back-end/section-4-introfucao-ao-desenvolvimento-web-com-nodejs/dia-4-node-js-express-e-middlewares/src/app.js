@@ -7,6 +7,7 @@ const vilidatePrice = require('./middlewares/validatePrice');
 const { validateDifficulty } = require('./middlewares/validateDifficulty');
 const generateToken = require('./utils/generateToken');
 const { validateSignup } = require('./middlewares/validateSignup');
+const { auth } = require('./middlewares/auth');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.post(
   '/activities',
+  auth,
   validateName,
   vilidatePrice,
   validateDescription,
