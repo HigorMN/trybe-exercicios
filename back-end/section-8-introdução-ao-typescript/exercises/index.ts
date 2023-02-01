@@ -27,3 +27,16 @@ console.log("\nVERIFICA A EXISTÊNCIA DE TRIÂNGULOS CUJOS LADOS TÊM:");
 console.log(`- 10cm, 5cm e 3cm: ${Ex.triangleCheck(10, 5, 3)}`);
 console.log(`- 10cm, 5cm e 3cm: ${Ex.triangleCheck(10, 5, 8)}`);
 console.log(`- 10cm, 5cm e 3cm: ${Ex.triangleCheck(30, 30, 30)}`);
+
+
+console.log("PARA FIXAR");
+
+console.log('função para calcular a área de um losango');
+console.log(`D = 32cm e d = 18cm ${Ex.getAreaOfLosango(32, 18)}`);
+console.log(`D = 200cm e d = 50cm ${Ex.getAreaOfLosango(200, 50)}`);
+console.log(`D = 75cm e d = 25cm ${Ex.getAreaOfLosango(75, 25)}`);
+
+console.log('função para calcular a área de um trapézio');
+console.log(`B = 100cm, b = 70cm e altura = 50cm ${Ex.getAreaOfTrap(100, 70, 50)}`);
+console.log(`B = 75cm, b = 50cm e altura = 35cm ${Ex.getAreaOfTrap(75, 50, 35)}`);
+
